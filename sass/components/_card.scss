@@ -1,46 +1,41 @@
 .card {
-  position: relative;
-  overflow: hidden;
-  border-radius: 8px;
+  display: flex;
+  flex-direction: column;
 
-  &__image img {
-    width: 100%;
-    display: block;
-  }
+  &__image {
+    position: relative;
+    overflow: hidden;
 
-  // Overlay oculto en mobile
-  &__overlay {
-    position: absolute;
-    inset: 0;
-    background: rgba(0,0,0,0.65);
-    color: white;
-    padding: 2rem;
-    display: flex;
-    flex-direction: column;
-    justify-content: flex-end;
-    opacity: 0;
-    transition: opacity 0.3s ease;
+    img {
+      width: 100%;
+      display: block;
+    }
   }
 
   &__title {
-    font-size: 1.6rem;
-    margin-bottom: 1rem;
+    margin-top: 1.5rem;
+    font-size: 1.4rem;
+    letter-spacing: 1px;
   }
 
+  /* ===== BOTONES MOBILE ===== */
   &__actions {
     display: flex;
-    flex-direction: column;
-    gap: 1rem;
+    gap: 1.5rem;
+    margin-top: 1.2rem;
 
     .btn {
-      text-align: center;
+      font-size: 0.9rem;
     }
   }
 
-  // Hover solo en desktop
-  @media (min-width: 1024px) {
-    &:hover .card__overlay {
-      opacity: 1;
-    }
+  /* Botones estáticos visibles por defecto */
+  &__actions--static {
+    display: flex;
+  }
+
+  /* Overlay oculto en mobile */
+  &__overlay {
+    display: none;
   }
 }

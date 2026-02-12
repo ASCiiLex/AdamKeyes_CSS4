@@ -1,28 +1,43 @@
 .projects {
-  padding: 4rem 0;
+  padding: 4rem 1.5rem;
 
   &__header {
     display: flex;
     justify-content: space-between;
     align-items: center;
     margin-bottom: 3rem;
+
+    h2 {
+      font-size: 2rem;
+      letter-spacing: 1px;
+    }
   }
 
   &__grid {
     display: grid;
-    gap: 2rem;
+    gap: 2.5rem;
+  }
+}
 
-    // Mobile: 1 columna
-    grid-template-columns: 1fr;
+/* ===== TABLET ===== */
+@media (min-width: 768px) {
+  .projects {
+    padding: 5rem 3rem;
 
-    // Tablet: 2 columnas
-    @media (min-width: 768px) {
+    &__grid {
       grid-template-columns: repeat(2, 1fr);
     }
+  }
+}
 
-    // Desktop: 2 columnas
-    @media (min-width: 1024px) {
+/* ===== DESKTOP ===== */
+@media (min-width: 1200px) {
+  .projects {
+    padding: 6rem 6rem;
+
+    &__grid {
       grid-template-columns: repeat(2, 1fr);
+      gap: 3rem;
     }
   }
 }
