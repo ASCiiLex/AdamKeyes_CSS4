@@ -1,0 +1,28 @@
+.projects {
+  padding: 4rem 0;
+
+  &__header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 3rem;
+  }
+
+  &__grid {
+    display: grid;
+    gap: 2rem;
+
+    // Mobile: 1 columna
+    grid-template-columns: 1fr;
+
+    // Tablet: 2 columnas
+    @media (min-width: 768px) {
+      grid-template-columns: repeat(2, 1fr);
+    }
+
+    // Desktop: 2 columnas
+    @media (min-width: 1024px) {
+      grid-template-columns: repeat(2, 1fr);
+    }
+  }
+}

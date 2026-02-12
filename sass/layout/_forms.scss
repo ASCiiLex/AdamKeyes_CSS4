@@ -19,17 +19,22 @@
   textarea {
     width: 100%;
     padding: 1rem 0;
-    background: none;
+
+    background: transparent !important;
     background-color: transparent !important;
+    box-shadow: none !important;
+
     border: none;
     border-bottom: 1px solid $clr-white;
+
     color: $clr-white;
     font-size: $fs-body-l;
     font-family: $font-primary;
+
     outline: none;
-    appearance: none;
-    -webkit-appearance: none;
-    
+
+    -webkit-appearance: none !important;
+    appearance: none !important;
 
     &::placeholder {
       color: $clr-grey;
@@ -38,7 +43,7 @@
 
     &:focus {
       border-bottom-color: $clr-green;
-    } 
+    }
   }
 
 
