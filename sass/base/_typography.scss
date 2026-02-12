@@ -1,0 +1,26 @@
+body {
+  font-family: $font-primary;
+  font-weight: $fw-medium;
+  font-size: $fs-body-l;
+  line-height: $lh-body-l;
+}
+
+h1 {
+  font-size: $fs-heading-xl;
+  line-height: $lh-heading-xl;
+  letter-spacing: $ls-heading-xl;
+  font-weight: $fw-bold;
+}
+
+h2 {
+  font-size: $fs-heading-l;
+  line-height: $lh-heading-l;
+  letter-spacing: $ls-heading-l;
+  font-weight: $fw-bold;
+}
+
+h3 {
+  font-size: $fs-heading-m;
+  line-height: $lh-heading-m;
+  font-weight: $fw-bold;
+}
