@@ -1,7 +1,7 @@
 @mixin breakpoint($bp) {
 
   @if $bp == tablet {
-    @media ((min-width: $bp-tablet) {
+    @media (min-width: $bp-tablet) {
       @content;
     }
   } 
