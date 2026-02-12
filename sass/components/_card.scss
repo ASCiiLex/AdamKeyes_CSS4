@@ -3,7 +3,7 @@
   flex-direction: column;
 
   &__image {
-    position: relative;
+    position: relative; // MUY IMPORTANTE
     overflow: hidden;
 
     img {
@@ -18,24 +18,49 @@
     letter-spacing: 1px;
   }
 
-  /* ===== BOTONES MOBILE ===== */
-  &__actions {
+  /* Botones visibles en mobile/tablet */
+  &__actions--static {
     display: flex;
     gap: 1.5rem;
     margin-top: 1.2rem;
-
-    .btn {
-      font-size: 0.9rem;
-    }
   }
 
-  /* Botones estáticos visibles por defecto */
-  &__actions--static {
-    display: flex;
-  }
-
-  /* Overlay oculto en mobile */
+  /* Overlay oculto por defecto */
   &__overlay {
     display: none;
+  }
+}
+@media (min-width: 1200px) {
+  .card {
+
+    /* 🔴 Ocultamos completamente los botones estáticos */
+    .card__actions--static {
+      display: none !important;
+    }
+
+    /* Activamos overlay */
+    .card__overlay {
+      position: absolute;
+      inset: 0;
+      background-color: rgba(0, 0, 0, 0.75);
+
+      display: flex;
+      justify-content: center;
+      align-items: center;
+
+      opacity: 0;
+      transition: opacity 0.3s ease;
+    }
+
+    .card__actions--overlay {
+      display: flex;
+      flex-direction: column;
+      gap: 1.5rem;
+    }
+
+    /* Hover */
+    &:hover .card__overlay {
+      opacity: 1;
+    }
   }
 }
