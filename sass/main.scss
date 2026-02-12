@@ -1,23 +1,8 @@
-// 1. Settings (variables, funciones, mixins globales)
-@import 'settings';
-
-// 2. Abstracts (mixins, funciones, helpers)
 @import './abstracts/abstracts';
-
-// 3. Vendors (reset, normalice, librerías externas)
 @import './vendors/vendors';
-
-// 4. Base (estilos base del proyecto)
 @import './base/base';
-
-// 5. Layout (estructura general)
 @import './layout/layout';
-
-// 6. Components (botones, tarjetas, etc.)
 @import './components/components';
-
-// 7. Pages (estilos específicos de páginas)
 @import './pages/pages';
-
-// 8. Themes (modos claro/oscuro, variaciones)
 @import './themes/themes';
+
