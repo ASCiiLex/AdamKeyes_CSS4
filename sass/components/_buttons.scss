@@ -1,0 +1,18 @@
+.btn {
+  display: inline-block;
+  text-decoration: none;
+  padding-bottom: 0.5rem;
+  font-weight: $fw-bold;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  color: $clr-white;
+  border: none;
+  background: none;
+  cursor: pointer;
+  border-bottom: 2px solid $clr-green;
+  transition: color 0.3s ease;
+
+  &:hover {
+    color: $clr-green;
+  }
+}

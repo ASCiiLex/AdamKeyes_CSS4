@@ -1,0 +1,86 @@
+/* ===========================
+   FORMULARIO (FOOTER)
+   =========================== */
+
+.form {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  width: 100%;
+  max-width: 450px;
+  margin: 0 auto;
+
+  &__group {
+    position: relative;
+    text-align: left;
+  }
+
+  input,
+  textarea {
+    width: 100%;
+    padding: 1rem 0;
+    background: none;
+    border: none;
+    border-bottom: 1px solid $clr-white;
+    color: $clr-white;
+    font-size: $fs-body-l;
+    font-family: $font-primary;
+    outline: none;
+    appearance: none;
+    -webkit-appearance: none;
+
+
+  &::placeholder {
+    color: $clr-grey;
+    opacity: 0.6;
+  }
+
+  &:focus {
+    border-bottom-color: $clr-green;
+  }
+}
+
+
+  textarea {
+    resize: none;
+    height: 120px;
+  }
+
+  /* Estado de error */
+  &__error {
+    border-bottom-color: red !important;
+  }
+
+  &__error-message {
+    position: absolute;
+    right: 0;
+    bottom: -1.5rem;
+    font-size: 1.2rem;
+    color: red;
+  }
+}
+
+/* ===========================
+   FOOTER
+   =========================== */
+
+.footer {
+  text-align: center;
+  padding: 4rem 1.5rem;
+  display: flex;
+  flex-direction: column;
+  gap: 3rem;
+
+  &__title {
+    font-size: $fs-heading-m;
+    letter-spacing: $ls-heading-l;
+  }
+
+  &__text {
+    max-width: 45ch;
+    margin: 0 auto;
+    color: $clr-grey;
+    font-size: $fs-body-l;
+    line-height: $lh-body-l;
+  }
+}
