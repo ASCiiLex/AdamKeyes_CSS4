@@ -1,12 +1,5 @@
-@use '../abstracts' as a;
-
+@forward 'base';
 @forward 'animations';
 @forward 'reset';
 @forward 'typography';
 
-body {
-  background-color: a.$color-background-primary;
-  color: a.$color-text-primary;
-  font-family: a.$font-primary;
-  font-weight: a.$fw-medium;
-}
