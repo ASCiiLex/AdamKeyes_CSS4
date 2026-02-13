@@ -1,12 +1,12 @@
-@use '../abstracts/tokens' as t;
+@use '../abstracts' as a;
 
 @forward 'animations';
 @forward 'reset';
 @forward 'typography';
 
 body {
-  background-color: t.$color-background-primary;
-  color: t.$color-text-primary;
-  font-family: t.$font-primary;
-  font-weight: t.$fw-medium;
+  background-color: a.$color-background-primary;
+  color: a.$color-text-primary;
+  font-family: a.$font-primary;
+  font-weight: a.$fw-medium;
 }
