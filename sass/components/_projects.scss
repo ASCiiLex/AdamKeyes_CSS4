@@ -1,0 +1,27 @@
+@use '../abstracts/tokens' as t;
+@use '../abstracts/mixins' as m;
+
+.projects {
+  padding: t.$space-xl t.$space-sm;
+
+  &__grid {
+    display: grid;
+    gap: t.$space-lg;
+  }
+}
+
+@include m.breakpoint(tablet) {
+  .projects {
+    padding: t.$space-xl t.$space-lg;
+
+    &__grid {
+      grid-template-columns: repeat(2, 1fr);
+    }
+  }
+}
+
+@include m.breakpoint(desktop) {
+  .projects {
+    padding: t.$space-xl t.$space-xl;
+  }
+}

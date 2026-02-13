@@ -1,66 +1,31 @@
+@use '../abstracts/tokens' as t;
+@use '../abstracts/mixins' as m;
+
 .card {
   display: flex;
   flex-direction: column;
 
   &__image {
-    position: relative; // MUY IMPORTANTE
-    overflow: hidden;
-
-    img {
-      width: 100%;
-      display: block;
-    }
+    width: 100%;
   }
 
   &__title {
-    margin-top: 1.5rem;
-    font-size: 1.4rem;
-    letter-spacing: 1px;
+    margin-top: t.$space-md;
+    font-size: t.$fs-heading-m;
+    font-weight: t.$fw-bold;
   }
 
-  /* Botones visibles en mobile/tablet */
-  &__actions--static {
-    display: flex;
-    gap: 1.5rem;
-    margin-top: 1.2rem;
-  }
-
-  /* Overlay oculto por defecto */
-  &__overlay {
-    display: none;
+  &__tech {
+    margin-top: t.$space-xs;
+    font-size: t.$fs-body-l;
+    color: t.$color-text-secondary;
   }
 }
-@media (min-width: 1200px) {
+
+@include m.breakpoint(tablet) {
   .card {
-
-    /* 🔴 Ocultamos completamente los botones estáticos */
-    .card__actions--static {
-      display: none !important;
-    }
-
-    /* Activamos overlay */
-    .card__overlay {
-      position: absolute;
-      inset: 0;
-      background-color: rgba(0, 0, 0, 0.75);
-
-      display: flex;
-      justify-content: center;
-      align-items: center;
-
-      opacity: 0;
-      transition: opacity 0.3s ease;
-    }
-
-    .card__actions--overlay {
-      display: flex;
-      flex-direction: column;
-      gap: 1.5rem;
-    }
-
-    /* Hover */
-    &:hover .card__overlay {
-      opacity: 1;
+    &__title {
+      font-size: t.$fs-heading-m;
     }
   }
 }

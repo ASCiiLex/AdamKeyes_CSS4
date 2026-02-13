@@ -1,0 +1,35 @@
+@use '../abstracts/tokens' as t;
+@use '../abstracts/mixins' as m;
+
+.skills {
+  padding: t.$space-xl t.$space-sm;
+  border-top: 1px solid t.$color-text-secondary;
+  border-bottom: 1px solid t.$color-text-secondary;
+
+  &__container {
+    display: grid;
+    gap: t.$space-xl;
+  }
+
+  &__title {
+    font-size: t.$fs-heading-l;
+    font-weight: t.$fw-bold;
+  }
+
+  &__experience {
+    font-size: t.$fs-body-l;
+    color: t.$color-text-secondary;
+  }
+}
+
+@include m.breakpoint(tablet) {
+  .skills__container {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@include m.breakpoint(desktop) {
+  .skills__container {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}

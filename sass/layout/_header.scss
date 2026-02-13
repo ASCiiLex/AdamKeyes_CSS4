@@ -1,87 +1,42 @@
-/* -----------------------------------
-   HEADER — Mobile first (default)
------------------------------------- */
+@use '../abstracts/tokens' as t;
+@use '../abstracts/mixins' as m;
 
 .header {
-  padding: 1.5rem 0;
+  padding: t.$space-lg 0;
 
   &__container {
-    width: min(90%, 1200px);
-    margin-inline: auto;
-
-    /* MOBILE: layout en columna */
     display: flex;
     flex-direction: column;
     align-items: center;
-    gap: 1.25rem;
+    gap: t.$space-md;
   }
 
   &__logo {
-    font-size: 1.6rem;
-    font-weight: 700;
-    text-decoration: none;
-    color: var(--clr-white);
-    text-align: center;
+    font-size: t.$fs-heading-m;
+    font-weight: t.$fw-bold;
   }
 
   &__social ul {
     display: flex;
-    gap: 1.25rem;
-
-    li a img {
-      width: 24px;
-      height: 24px;
-      transition: opacity .2s ease;
-
-      &:hover {
-        opacity: .6;
-      }
-    }
+    gap: t.$space-md;
+    list-style: none;
+    padding: 0;
   }
 }
 
-/* -----------------------------------
-   HEADER — Tablet (768px+)
------------------------------------- */
-
-@include breakpoint(tablet) {
+@include m.breakpoint(tablet) {
   .header {
-    padding: 2rem 0;
+    padding: t.$space-lg 0;
 
     &__container {
-      /* TABLET: layout en fila */
       flex-direction: row;
       justify-content: space-between;
       align-items: center;
       gap: 0;
     }
 
-    &__logo {
-      font-size: 2rem;
-      text-align: left;
-    }
-
     &__social ul {
-      gap: 1.75rem;
-
-      li a img {
-        width: 28px;
-        height: 28px;
-      }
-    }
-  }
-}
-
-/* -----------------------------------
-   HEADER — Desktop (1200px+)
------------------------------------- */
-
-@include breakpoint(desktop) {
-  .header {
-    padding: 2.5rem 0;
-
-    &__logo {
-      font-size: 2.2rem;
+      gap: t.$space-lg;
     }
   }
 }

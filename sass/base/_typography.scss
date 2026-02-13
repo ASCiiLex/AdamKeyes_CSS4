@@ -1,26 +1,29 @@
+@use '../abstracts/tokens' as t;
+
+
 body {
-  font-family: $font-primary;
-  font-weight: $fw-medium;
-  font-size: $fs-body-l;
-  line-height: $lh-body-l;
+  font-family: t.$font-primary;
+  font-weight: t.$fw-medium;
+  font-size: t.$fs-body-l;
+  line-height: t.$lh-body-l;
 }
 
 h1 {
-  font-size: $fs-heading-xl;
-  line-height: $lh-heading-xl;
-  letter-spacing: $ls-heading-xl;
-  font-weight: $fw-bold;
+  font-size: t.$fs-heading-xl;
+  line-height: t.$lh-heading-xl;
+  letter-spacing: t.$ls-heading-xl;
+  font-weight: t.$fw-bold;
 }
 
 h2 {
-  font-size: $fs-heading-l;
-  line-height: $lh-heading-l;
-  letter-spacing: $ls-heading-l;
-  font-weight: $fw-bold;
+  font-size: t.$fs-heading-l;
+  line-height: t.$lh-heading-l;
+  letter-spacing: t.$ls-heading-l;
+  font-weight: t.$fw-bold;
 }
 
 h3 {
-  font-size: $fs-heading-m;
-  line-height: $lh-heading-m;
-  font-weight: $fw-bold;
+  font-size: t.$fs-heading-m;
+  line-height: t.$lh-heading-m;
+  font-weight: t.$fw-bold;
 }
