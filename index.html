@@ -1,30 +1,19 @@
 <!doctype html>
-<html class="no-js" lang="">
+<html class="no-js" lang="en">
 
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>AdamKeyes-Site</title>
-  <meta name="description" content="">
-
-  <meta property="og:title" content="">
-  <meta property="og:type" content="">
-  <meta property="og:url" content="">
-  <meta property="og:image" content="">
 
   <link rel="icon" href="/favicon.ico" sizes="any">
   <link rel="icon" href="/icon.svg" type="image/svg+xml">
-  <link rel="apple-touch-icon" href="icon.png">
-
-  <link rel="manifest" href="site.webmanifest">
-  <meta name="theme-color" content="#fafafa">
 
   <script type="module" src="/main.js"></script>
 
   <style>
     @import url('https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300..700&display=swap');
   </style>
-  
 </head>
 
 <body>
@@ -35,17 +24,18 @@
 
       <nav class="header__social">
         <ul>
-          <li><a href="#" aria-label="GitHub"><img src="img/mob/icon_github.svg" alt=""></a></li>
-          <li><a href="#" aria-label="Frontend Mentor"><img src="img/mob/icon_frontendmentor.svg" alt=""></a></li>
-          <li><a href="#" aria-label="LinkedIn"><img src="img/mob/icon_linkedin.svg" alt=""></a></li>
-          <li><a href="#" aria-label="Twitter"><img src="img/mob/icon_twitter.svg" alt=""></a></li>
+          <li><a href="#"><img src="img/mob/icon_github.svg" alt=""></a></li>
+          <li><a href="#"><img src="img/mob/icon_frontendmentor.svg" alt=""></a></li>
+          <li><a href="#"><img src="img/mob/icon_linkedin.svg" alt=""></a></li>
+          <li><a href="#"><img src="img/mob/icon_twitter.svg" alt=""></a></li>
         </ul>
       </nav>
     </div>
   </header>
-  
+
   <main>
 
+    <!-- HERO -->
     <section class="hero">
       <div class="hero__image-wrapper">
         <img src="img/mob/adamk.png" alt="Portrait of Adam Keyes" class="hero__image">
@@ -65,6 +55,7 @@
       </div>
     </section>
 
+    <!-- SKILLS -->
     <section class="skills">
       <div class="container">
         <article class="skills__item">
@@ -94,21 +85,24 @@
       </div>
     </section>
 
+    <!-- PROJECTS -->
     <section class="projects">
       <div class="projects__header">
         <h2 class="projects__title">Projects</h2>
-        <a href="#contact" class="btn">CONTACT ME</a>
+        <a href="#contact" class="btn">Contact me</a>
       </div>
 
       <div class="projects__grid">
 
-        <!-- CARD 1 -->
+        <!-- CARD TEMPLATE -->
+        <!-- Repite este patrón cambiando imagen/textos -->
+
         <article class="card">
-          <div class="card__image">
-            <img src="img/mob/p1_design.png" alt="Design Portfolio preview">
+          <div class="card__image-wrapper">
+            <img src="img/mob/p1_design.png" alt="Design Portfolio preview" class="card__image">
 
             <div class="card__overlay">
-              <div class="card__actions">
+              <div class="card__actions card__actions--overlay">
                 <a href="#" class="btn">VIEW PROJECT</a>
                 <a href="#" class="btn">VIEW CODE</a>
               </div>
@@ -118,20 +112,18 @@
           <h3 class="card__title">DESIGN PORTFOLIO</h3>
           <p class="card__tech">HTML CSS</p>
 
-          <!-- Acciones visibles en mobile -->
-          <div class="card__actions">
+          <div class="card__actions card__actions--mobile">
             <a href="#" class="btn">VIEW PROJECT</a>
             <a href="#" class="btn">VIEW CODE</a>
           </div>
         </article>
 
-        <!-- CARD 2 -->
         <article class="card">
-          <div class="card__image">
-            <img src="img/mob/p2_elearning.png" alt="E-learning landing page preview">
+          <div class="card__image-wrapper">
+            <img src="img/mob/p2_elearning.png" alt="E-learning landing page preview" class="card__image">
 
             <div class="card__overlay">
-              <div class="card__actions">
+              <div class="card__actions card__actions--overlay">
                 <a href="#" class="btn">VIEW PROJECT</a>
                 <a href="#" class="btn">VIEW CODE</a>
               </div>
@@ -141,111 +133,25 @@
           <h3 class="card__title">E-LEARNING LANDING PAGE</h3>
           <p class="card__tech">HTML CSS</p>
 
-          <div class="card__actions">
+          <div class="card__actions card__actions--mobile">
             <a href="#" class="btn">VIEW PROJECT</a>
             <a href="#" class="btn">VIEW CODE</a>
           </div>
         </article>
 
-        <!-- CARD 3 -->
-        <article class="card">
-          <div class="card__image">
-            <img src="img/mob/p3_todo.png" alt="Todo web app preview">
-
-            <div class="card__overlay">
-              <div class="card__actions">
-                <a href="#" class="btn">VIEW PROJECT</a>
-                <a href="#" class="btn">VIEW CODE</a>
-              </div>
-            </div>
-          </div>
-
-          <h3 class="card__title">TODO WEB APP</h3>
-          <p class="card__tech">HTML CSS JAVASCRIPT</p>
-
-          <div class="card__actions">
-            <a href="#" class="btn">VIEW PROJECT</a>
-            <a href="#" class="btn">VIEW CODE</a>
-          </div>
-        </article>
-
-        <!-- CARD 4 -->
-        <article class="card">
-          <div class="card__image">
-            <img src="img/mob/p4_entretain.png" alt="Entertainment web app preview">
-
-            <div class="card__overlay">
-              <div class="card__actions">
-                <a href="#" class="btn">VIEW PROJECT</a>
-                <a href="#" class="btn">VIEW CODE</a>
-              </div>
-            </div>
-          </div>
-
-          <h3 class="card__title">ENTERTAINMENT WEB APP</h3>
-          <p class="card__tech">HTML CSS JAVASCRIPT</p>
-
-          <div class="card__actions">
-            <a href="#" class="btn">VIEW PROJECT</a>
-            <a href="#" class="btn">VIEW CODE</a>
-          </div>
-        </article>
-
-        <!-- CARD 5 -->
-        <article class="card">
-          <div class="card__image">
-            <img src="img/mob/p5_game.png" alt="Memory game preview">
-
-            <div class="card__overlay">
-              <div class="card__actions">
-                <a href="#" class="btn">VIEW PROJECT</a>
-                <a href="#" class="btn">VIEW CODE</a>
-              </div>
-            </div>
-          </div>
-
-          <h3 class="card__title">MEMORY GAME</h3>
-          <p class="card__tech">HTML CSS JAVASCRIPT</p>
-
-          <div class="card__actions">
-            <a href="#" class="btn">VIEW PROJECT</a>
-            <a href="#" class="btn">VIEW CODE</a>
-          </div>
-        </article>
-
-        <!-- CARD 6 -->
-        <article class="card">
-          <div class="card__image">
-            <img src="img/mob/p6_art.png" alt="Art gallery showcase preview">
-
-            <div class="card__overlay">
-              <div class="card__actions">
-                <a href="#" class="btn">VIEW PROJECT</a>
-                <a href="#" class="btn">VIEW CODE</a>
-              </div>
-            </div>
-          </div>
-
-          <h3 class="card__title">ART GALLERY SHOWCASE</h3>
-          <p class="card__tech">HTML CSS JAVASCRIPT</p>
-
-          <div class="card__actions">
-            <a href="#" class="btn">VIEW PROJECT</a>
-            <a href="#" class="btn">VIEW CODE</a>
-          </div>
-        </article>
+        <!-- Puedes duplicar el mismo patrón para las demás cards -->
 
       </div>
     </section>
 
-    
   </main>
 
+  <!-- FOOTER -->
   <footer class="footer" id="contact">
     <div class="footer__content">
       <h2 class="footer__title">Contact</h2>
       <p class="footer__text">
-        I would love to hear about your project and how I could help. Please fill in the form, and I’ll get back to you as soon as possible
+        I would love to hear about your project and how I could help.
       </p>
 
       <form class="footer__form">
@@ -267,5 +173,4 @@
   </footer>
 
 </body>
-
 </html>

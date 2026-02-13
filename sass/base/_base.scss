@@ -6,3 +6,8 @@ body {
   font-family: a.$font-primary;
   font-weight: a.$fw-medium;
 }
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
