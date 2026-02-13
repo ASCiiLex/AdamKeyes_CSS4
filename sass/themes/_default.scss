@@ -1,5 +1,8 @@
+@use '../abstracts' as t;
+
+
 html * {
-   font-family: $font-primary;
+   font-family: t.$font-primary;
  
 }
  

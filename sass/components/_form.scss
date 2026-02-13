@@ -48,7 +48,7 @@
   &__error-message {
     position: absolute;
     right: 0;
-    bottom: -t.$space-md;
+    bottom: -(t.$space-md);
     font-size: 0.75rem;
     color: t.$color-error;
   }
