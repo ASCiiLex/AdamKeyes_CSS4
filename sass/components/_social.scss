@@ -1,4 +1,5 @@
 @use '../abstracts/tokens' as t;
+@use '../abstracts/mixins' as m;
 
 .social {
 
@@ -17,9 +18,14 @@
 
   &__link img {
     display: block;
+    width: 20px;
+      @include m.breakpoint(tablet) {
+      width: 24px;
+    }
   }
 
   &__link:hover {
     filter: brightness(0) saturate(100%) invert(76%) sepia(44%) saturate(473%) hue-rotate(98deg) brightness(96%) contrast(93%);
   }
+
 }
