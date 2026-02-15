@@ -16,12 +16,6 @@
     font-weight: t.$fw-bold;
   }
 
-  &__social ul {
-    display: flex;
-    gap: t.$space-md;
-    list-style: none;
-    padding: 0;
-  }
 }
 
 @include m.breakpoint(tablet) {
@@ -35,8 +29,5 @@
       gap: 0;
     }
 
-    &__social ul {
-      gap: t.$space-lg;
-    }
   }
 }
