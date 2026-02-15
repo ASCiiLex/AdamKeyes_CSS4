@@ -1,5 +1,4 @@
 @use '../abstracts/tokens' as t;
-@use '../abstracts/mixins' as m;
 
 .form-group {
   position: relative;
@@ -12,10 +11,11 @@ textarea {
   width: 100%;
   background: transparent;
   border: none;
-  border-bottom: 1px solid t.$color-border;
+  border-bottom: 1px solid t.$color-text-secondary;
   padding: t.$space-sm 0;
   color: t.$color-text-primary;
   font-size: t.$fs-body-l;
+  line-height: t.$lh-body-l;
   text-transform: uppercase;
   letter-spacing: 1px;
   outline: none;
@@ -23,7 +23,7 @@ textarea {
 
 input:focus,
 textarea:focus {
-  border-bottom: 1px solid t.$color-accent;
+  border-bottom: 1px solid t.$color-primary;
 }
 
 .form-error {
@@ -35,7 +35,6 @@ textarea:focus {
   color: t.$color-error;
 }
 
-/* Error state */
 .form-group.error input,
 .form-group.error textarea {
   border-bottom: 1px solid t.$color-error;
