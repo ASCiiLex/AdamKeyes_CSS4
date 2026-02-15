@@ -21,11 +21,27 @@ textarea {
   outline: none;
 }
 
+/* Focus state */
 input:focus,
 textarea:focus {
   border-bottom: 1px solid t.$color-primary;
 }
 
+/* ---------- VALIDATION STATES ---------- */
+
+/* Solo mostrar error cuando el usuario ha escrito algo */
+input:not(:placeholder-shown):invalid,
+textarea:not(:placeholder-shown):invalid {
+  border-bottom: 1px solid t.$color-error;
+}
+
+/* Mostrar mensaje de error */
+input:not(:placeholder-shown):invalid + .form-error,
+textarea:not(:placeholder-shown):invalid + .form-error {
+  display: block;
+}
+
+/* Mensaje */
 .form-error {
   display: none;
   position: absolute;
@@ -33,13 +49,4 @@ textarea:focus {
   bottom: -18px;
   font-size: 12px;
   color: t.$color-error;
-}
-
-.form-group.error input,
-.form-group.error textarea {
-  border-bottom: 1px solid t.$color-error;
-}
-
-.form-group.error .form-error {
-  display: block;
 }
