@@ -1,0 +1,46 @@
+@use '../abstracts/tokens' as t;
+@use '../abstracts/mixins' as m;
+
+.contact {
+  background-color: t.$color-secondary;
+  padding: t.$space-2xl t.$space-sm;
+  position: relative;
+
+  // Imagen decorativa
+  background-image: url('../../img/mob/pattern-rings.svg');
+  background-repeat: no-repeat;
+  background-position: left -100px top 250px;
+
+  &__container {
+    text-align: center;
+  }
+
+  &__title {
+    font-size: t.$fs-heading-l;
+    margin-bottom: t.$space-md;
+  }
+
+  &__text {
+    color: t.$color-text-secondary;
+    max-width: 45ch;
+    margin: 0 auto t.$space-xl;
+  }
+
+  &__form {
+    max-width: 500px;
+    margin: 0 auto;
+  }
+
+  &__divider {
+    height: 1px;
+    background: t.$color-border;
+    margin: t.$space-2xl 0;
+  }
+
+  &__bottom {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: t.$space-md;
+  }
+}

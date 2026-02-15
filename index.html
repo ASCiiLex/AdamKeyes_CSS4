@@ -233,30 +233,59 @@
   </main>
 
   <!-- FOOTER -->
-  <footer class="footer" id="contact">
-    <div class="footer__content">
-      <h2 class="footer__title">Contact</h2>
-      <p class="footer__text">
-        I would love to hear about your project and how I could help.
-      </p>
+  <footer class="contact">
 
-      <form class="footer__form">
-        <div class="form__group">
-          <input type="text" name="name" placeholder="Name" required>
+    <div class="contact__container">
+
+      <div class="contact__content">
+        <h2 class="contact__title">Contact</h2>
+
+        <p class="contact__text">
+          I would love to hear about your project and how I could help.
+        </p>
+      </div>
+
+      <form class="contact__form" novalidate>
+        <div class="form-group">
+          <input type="text" name="name" placeholder="NAME" required>
+          <span class="form-error">Sorry, invalid format here</span>
         </div>
 
-        <div class="form__group">
-          <input type="email" name="email" placeholder="Email" required>
+        <div class="form-group">
+          <input type="email" name="email" placeholder="EMAIL" required>
+          <span class="form-error">Sorry, invalid format here</span>
         </div>
 
-        <div class="form__group">
-          <textarea name="message" placeholder="Message" required></textarea>
+        <div class="form-group">
+          <textarea name="message" placeholder="MESSAGE" rows="4" required></textarea>
+          <span class="form-error">Sorry, invalid format here</span>
         </div>
 
-        <button type="submit" class="btn">Send message</button>
+        <button type="submit" class="btn btn--underline">
+          SEND MESSAGE
+        </button>
       </form>
+
     </div>
+
+    <!-- Divider -->
+    <div class="contact__divider"></div>
+
+    <!-- Footer bottom (igual que header) -->
+    <div class="contact__bottom">
+      <div class="logo">adamkeyes</div>
+
+      <div class="socials">
+        <!-- mismos iconos que header -->
+        <a href="#"><img src="img/icons/icon-github.svg" alt="GitHub"></a>
+        <a href="#"><img src="img/icons/icon-frontendmentor.svg" alt="Frontend Mentor"></a>
+        <a href="#"><img src="img/icons/icon-linkedin.svg" alt="LinkedIn"></a>
+        <a href="#"><img src="img/icons/icon-twitter.svg" alt="Twitter"></a>
+      </div>
+    </div>
+
   </footer>
+
 
 </body>
 </html>
