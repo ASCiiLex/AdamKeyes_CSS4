@@ -1,0 +1,8 @@
+@use '../abstracts/tokens' as t;
+
+.logo {
+  font-size: t.$fs-heading-m;
+  font-weight: t.$fw-bold;
+  color: t.$color-text-primary;
+  text-decoration: none;
+}
