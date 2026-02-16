@@ -5,12 +5,15 @@
   background-color: t.$color-background-secondary;
   padding: t.$space-xl t.$space-sm;
 
+  /* ---------- IMAGEN DECORATIVA ---------- */
   background-image: url('../../img/mob/pattern-rings.png');
   background-repeat: no-repeat;
-  background-position: left 0px bottom 240px;
+  background-position: left 0 bottom 240px;
 
+  /* ---------- CONTENEDOR GENERAL ---------- */
   &__container {
     text-align: center;
+    max-width: $container-mobile;
   }
 
   &__title {
@@ -25,19 +28,30 @@
     margin: 0 auto t.$space-lg;
   }
 
+  /* ---------- FORM ---------- */
   &__form {
     max-width: 500px;
     margin: 0 auto;
+
+    /* Botón  */
+    display: flex;
+    flex-direction: column;
+
+    .btn {
+      align-self: flex-end;
+    }
   }
 
+  /* ---------- DIVIDER ---------- */
   &__divider {
-    height: 1px;
-    background: t.$color-text-secondary;
-    max-width: t.$container-max-width;
-  margin: t.$space-xl auto;
-    opacity: 0.3;
+    height: 2px;
+    background: t.$color-text-primary;
+    max-width: 45ch;
+    margin: t.$space-xl auto;
+    opacity: 1;
   }
 
+  /* ---------- FOOTER BOTTOM ---------- */
   &__bottom {
     display: flex;
     flex-direction: column;
@@ -45,15 +59,93 @@
     gap: t.$space-md;
   }
 
+  /* ================= TABLET ================= */
+
   @include m.breakpoint(tablet) {
 
+    /* ---------- IMAGEN DECORATIVA ---------- */
+    background-position: left 0px bottom 200px;
+
+    /* ---------- CONTENEDOR GENERAL ---------- */
+    &__container {
+      padding: 0 t.$space-lg;
+      max-width: $container-tablet;
+    }
+
+    &__title {
+      font-size: t.$fs-heading-xl;
+      line-height: t.$lh-heading-xl;
+      margin-bottom: t.$space-lg;
+    }
+
+    &__text {
+      max-width: 38ch;
+      margin: 0 auto t.$space-xl;
+    }
+
+    /* ---------- FORM ---------- */
+    &__form {
+      max-width: 445px;
+      margin: t.$space-xl auto 0;
+
+      .btn {
+        margin-bottom: t.$space-xl;
+      }
+    }
+
+    /* ---------- DIVIDER ---------- */
+    &__divider {
+      margin: calc(t.$space-xl * 1.5) auto;
+      padding: 0 t.$space-lg;
+    }
+
+    /* ---------- FOOTER BOTTOM ---------- */
     &__bottom {
       flex-direction: row;
       justify-content: space-between;
       align-items: center;
+
+      max-width: t.$container-max-width;
+      margin: 0 auto;
+      padding: 0 t.$space-lg;
+    }
+  }
+
+
+  /* ================= DESKTOP ================= */
+
+  @include m.breakpoint(desktop) {
+
+    padding: t.$space-xl 0;
+
+    /* ---------- IMAGEN DECORATIVA ---------- */
+    background-image: url('../../img/des/pattern-rings.png');
+    background-position: left 0px bottom 220px;
+
+    /* ---------- CONTENEDOR GENERAL ---------- */
+    &__container {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      align-items: start;
+      gap: t.$space-xl;
+      text-align: left;
       max-width: t.$container-max-width;
       margin: 0 auto;
     }
 
+    &__content {
+      margin: t.$space-md auto 0;
+
+    }
+
+    &__text {
+      margin: 0 0 t.$space-lg 0;
+      max-width: 38ch;
+    }
+
+    /* ---------- FORM ---------- */
+    &__form {
+      margin: 0;
+    }
   }
 }
