@@ -1,171 +1,156 @@
-  @use '../abstracts/tokens' as t;
-  @use '../abstracts/mixins' as m;
+@use '../abstracts/tokens' as t;
+@use '../abstracts/mixins' as m;
 
-  .contact {
-    background-color: t.$color-background-secondary;
-    padding: t.$space-xl t.$space-sm;
+.contact {
+  background-color: t.$color-background-secondary;
+  padding: t.$space-xl t.$space-sm;
 
-    /* ---------- IMAGEN DECORATIVA ---------- */
-    background-image: url('../../img/mob/pattern-rings.png');
-    background-repeat: no-repeat;
-    background-position: left 0 bottom 240px;
+  /* ---------- IMAGEN DECORATIVA ---------- */
+  background-image: url('../../img/mob/pattern-rings.png');
+  background-repeat: no-repeat;
+  background-position: left 0 bottom 240px;
 
-    /* ---------- CONTENEDOR GENERAL ---------- */
-    &__container {
-      text-align: center;
-      max-width: t.$container-mobile;
+  /* ---------- CONTENEDOR GENERAL ---------- */
+  &__container {
+    text-align: center;
+    max-width: t.$container-mobile;
+    margin: 0 auto;
+  }
+
+  &__title {
+    font-size: t.$fs-heading-l;
+    line-height: t.$lh-heading-l;
+    margin-bottom: t.$space-md;
+  }
+
+  &__text {
+    color: t.$color-text-secondary;
+    max-width: 380px;
+    margin: 0 auto t.$space-lg;
+  }
+
+  /* ---------- FORM ---------- */
+  &__form {
+    max-width: 500px;
+    margin: 0 auto;
+
+    display: flex;
+    flex-direction: column;
+
+    .btn {
+      align-self: flex-end;
+    }
+  }
+
+  /* ---------- DIVIDER ---------- */
+  &__divider {
+    height: 2px;
+    background: t.$color-text-primary;
+    width: 100%;
+    margin: t.$space-xl 0;
+  }
+
+  /* ---------- FOOTER BOTTOM ---------- */
+  &__bottom {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: t.$space-md;
+
+    max-width: t.$container-mobile;
+    margin: 0 auto;
+  }
+
+  /* ================= TABLET ================= */
+
+  @include m.breakpoint(tablet) {
+
+    padding: t.$space-xl t.$space-lg;
+    background-position: left 0 bottom 200px;
+
+    &__container,
+    &__bottom {
+      max-width: t.$container-tablet;
       margin: 0 auto;
-
     }
 
     &__title {
-      font-size: t.$fs-heading-l;
-      line-height: t.$lh-heading-l;
-      margin-bottom: t.$space-md;
+      font-size: t.$fs-heading-xl;
+      line-height: t.$lh-heading-xl;
+      margin-bottom: t.$space-lg;
     }
 
     &__text {
-      color: t.$color-text-secondary;
-      max-width: 380px;
-      margin: 0 auto t.$space-lg;
+      max-width: 38ch;
+      margin: 0 auto t.$space-xl;
     }
 
-    /* ---------- FORM ---------- */
     &__form {
-      max-width: 500px;
-      margin: 0 auto;
-
-      /* Botón  */
-      display: flex;
-      flex-direction: column;
+      max-width: 445px;
+      margin: t.$space-xl auto 0;
 
       .btn {
-        align-self: flex-end;
+        margin-bottom: t.$space-xl;
       }
     }
 
-    /* ---------- DIVIDER ---------- */
-    &__divider {
-      height: 2px;
-      background: t.$color-text-primary;
-      width: 100%;
-      margin: t.$space-xl 0;
-      opacity: 1;
-    }
-
-    /* ---------- FOOTER BOTTOM ---------- */
     &__bottom {
-      display: flex;
-      flex-direction: column;
+      flex-direction: row;
+      justify-content: space-between;
       align-items: center;
-      gap: t.$space-md;
-    }
-
-    /* ================= TABLET ================= */
-
-    @include m.breakpoint(tablet) {
-
-      /* ---------- IMAGEN DECORATIVA ---------- */
-      background-position: left 0px bottom 200px;
-
-      /* ---------- CONTENEDOR GENERAL ---------- */
-      &__container {
-        padding: 0 t.$space-lg;
-        max-width: t.$container-tablet;
-        margin: 0 auto;
-
-      }
-
-      &__title {
-        font-size: t.$fs-heading-xl;
-        line-height: t.$lh-heading-xl;
-        margin-bottom: t.$space-lg;
-      }
-
-      &__text {
-        max-width: 38ch;
-        margin: 0 auto t.$space-xl;
-      }
-
-      /* ---------- FORM ---------- */
-      &__form {
-        max-width: 445px;
-        margin: t.$space-xl auto 0;
-
-        .btn {
-          margin-bottom: t.$space-xl;
-        }
-      }
-
-      /* ---------- DIVIDER ---------- */
-      &__divider {
-        margin: calc(t.$space-xl ) auto;
-      }
-
-      /* ---------- FOOTER BOTTOM ---------- */
-      &__bottom {
-        flex-direction: row;
-        justify-content: space-between;
-        align-items: center;
-
-        max-width: t.$container-max-width;
-        margin: 0 auto;
-        padding: 0 t.$space-lg;
-      }
-    }
-
-    /* ================= DESKTOP ================= */
-
-    @include m.breakpoint(desktop) {
-
-      padding: t.$space-xl 0;
-
-      /* ---------- IMAGEN DECORATIVA ---------- */
-      background-image: url('../../img/des/pattern-rings.png');
-      background-position: left 0 bottom 220px;
-
-      /* ---------- CONTENEDOR GENERAL ---------- */
-      &__container {
-        display: grid;
-        grid-template-columns: 1fr 1fr;
-        align-items: start;
-        gap: calc(t.$space-xl * 1.5);
-        text-align: left;
-
-        max-width: t.$container-max-width;
-        margin: 0 auto;
-        padding-inline: t.$space-lg;
-      }
-
-      &__content {
-        margin-top: t.$space-md;
-      }
-
-      &__text {
-        margin: 0 0 t.$space-lg 0;
-        max-width: 38ch;
-      }
-
-      /* ---------- FORM ---------- */
-      &__form {
-        margin: 0;
-      }
-
-      /* ---------- DIVIDER ---------- */
-      &__divider {
-        width: 100%;
-        margin: t.$space-xl 0;
-      }
-
-      /* ---------- FOOTER BOTTOM ---------- */
-      &__bottom {
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
-
-        max-width: t.$container-max-width;
-        margin: 0 auto;
-        padding-inline: t.$space-lg;
-      }
     }
   }
+
+ /* ================= DESKTOP ================= */
+
+  @include m.breakpoint(desktop) {
+
+    padding: t.$space-xl 0;
+
+    background-image: url('../../img/des/pattern-rings.png');
+    background-position: left 0 bottom 220px;
+
+    &__container,
+    &__bottom,
+    &__divider {
+      max-width: t.$container-max-width;
+      margin-left: auto;
+      margin-right: auto;
+    }
+
+    /* GRID */
+    &__container {
+      display: grid;
+      grid-template-columns: 1fr 1.15fr;
+      column-gap: calc(t.$space-xl * 2);
+      align-items: start;
+      text-align: left;
+    }
+
+    &__content {
+      margin-top: t.$space-md;
+    }
+
+    &__text {
+      margin: 0 0 t.$space-lg 0;
+      max-width: 38ch;
+    }
+
+    &__form {
+      margin: 0;
+      max-width: none;
+      width: 100%;
+    }
+
+    /* DIVIDER */
+    &__divider {
+      margin: t.$space-xl auto;
+    }
+
+    /* BOTTOM */
+    &__bottom {
+      justify-content: space-between;
+      align-items: center;
+    }
+  }
+}
