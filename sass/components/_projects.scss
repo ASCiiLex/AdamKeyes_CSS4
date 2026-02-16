@@ -4,11 +4,27 @@
 .projects {
   padding: t.$space-xl t.$space-sm;
 
+  /* ---------- HEADER (TITLE + BTN INLINE ALWAYS) ---------- */
+  &__header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: t.$space-md;
+  }
+
+  &__title {
+    margin: 0;
+  }
+
+  /* ---------- GRID ---------- */
   &__grid {
+    margin-top: t.$space-lg;
     display: grid;
     gap: t.$space-lg;
   }
 }
+
+/* ================= TABLET ================= */
 
 @include m.breakpoint(tablet) {
   .projects {
@@ -19,6 +35,8 @@
     }
   }
 }
+
+/* ================= DESKTOP ================= */
 
 @include m.breakpoint(desktop) {
   .projects {
