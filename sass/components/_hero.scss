@@ -79,20 +79,12 @@
       max-width: 445px;
     }
 
-    &__image-wrapper {
-      position: absolute;
-      bottom: 0;
-      right: 0;
-      margin: 0;
-      z-index: 1;
-    }
-
-    &__image {
-      max-width: 322px;
-    }
-
     &__title {
       font-size: 56px;
+    }
+
+    .hero__image {
+      display: none;
     }
   }
 }
@@ -109,19 +101,14 @@
       padding-top: t.$space-xl;
     }
 
-    &__image-wrapper {
-      right: 0;
-      bottom: 0;
-    }
-
-    &__image {
-      max-width: 445px;
-    }
-
     &__title {
       font-size: t.$fs-heading-xl;
       line-height: t.$lh-heading-xl;
       letter-spacing: t.$ls-heading-xl;
+    }
+
+    .hero__image {
+      display: none;
     }
   }
 }

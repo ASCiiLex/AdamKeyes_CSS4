@@ -6,3 +6,27 @@
 @use 'themes';
 @use 'vendors';
 
+
+@use 'abstracts/tokens' as t;
+@use 'abstracts/mixins' as m;
+
+@include m.breakpoint(tablet) {
+  body {
+    background-image: url('../img/tab/adamk.png');
+    background-repeat: no-repeat;
+    background-position: top right;
+    background-size: 322px auto;
+  }
+}
+
+@include m.breakpoint(desktop) {
+  body {
+    background-image: url('../img/des/adamk.png');
+    background-repeat: no-repeat;
+    background-size: 500px auto;
+    background-position:
+      top
+      right calc(max(0px, (100vw - #{t.$container-max-width}) / 2));
+  }
+}
+
