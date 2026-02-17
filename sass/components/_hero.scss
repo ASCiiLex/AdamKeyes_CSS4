@@ -3,29 +3,24 @@
 
 .hero {
   position: relative;
-    overflow: hidden;
-  
+  z-index: 1;
 
   background-image: url('../../img/mob/pattern-rings.png');
   background-repeat: no-repeat;
-  background-position: left 0px top 30px;
+  background-position: left 0px top 0px;
 
-  
-  .container {
-    position: relative;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    text-align: center;
-    z-index: 2;
-  }
+  /* ===== IMAGEN ===== */
 
   &__image-wrapper {
-    margin-bottom: t.$space-lg;
+    position: absolute;
+    top: 0;
+    transform: translateX(-50%);
+    transform: translateY(-35%);
+    z-index: 1;
+    pointer-events: none;
   }
 
   &__image {
-    display: block;
     max-width: 250px;
 
     img {
@@ -35,25 +30,22 @@
     }
   }
 
+  /* ===== CONTENIDO ===== */
+
+  .container {
+    position: relative;
+    z-index: 2; //
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+
   &__title {
     font-size: 40px;
     line-height: 1.1;
     letter-spacing: -1px;
-
-    span {
-      position: relative;
-      display: inline-block;
-
-      &::after {
-        content: "";
-        position: absolute;
-        left: 0;
-        bottom: -6px;
-        width: 100%;
-        height: 4px;
-        background: t.$color-primary;
-      }
-    }
+    padding-top: 250px;
   }
 
   &__text {
@@ -63,24 +55,27 @@
 
   .btn {
     margin-top: t.$space-lg;
+    margin-bottom: t.$space-xl;
+  }
+
+  /* ===== OVAL ===== */
+
+  &::after {
+    content: "";
+    position: absolute;
+    width: 129px;
+    height: 129px;
+    background-image: url('../../img/mob/Oval.png');
+    background-repeat: no-repeat;
+    background-size: contain;
+
+    right: -70px;
+    top: 120px;
+
+    z-index: 0;
+    pointer-events: none;
   }
 }
-
-.hero::after {
-  content: "";
-  position: absolute;
-  width: 129px;
-  height: 129px;
-  background-image: url('../../img/mob/Oval.png');
-  background-repeat: no-repeat;
-  background-size: contain;
-
-  right: -70px;
-  top: 170px;
-
-  pointer-events: none;
-}
-
 
 
 /* ================= TABLET ================= */
@@ -88,7 +83,7 @@
 @include m.breakpoint(tablet) {
   .hero {
     min-height: 600px;
-    padding-top: 0;
+
     background-image: url('../../img/tab/pattern-rings.png');
     background-position: left 0px top 10px;
 
@@ -106,16 +101,16 @@
       font-size: 56px;
     }
 
-    .hero__image {
+    /* ocultamos imagen mobile */
+    &__image-wrapper {
       display: none;
     }
-  }
 
-  .hero::after {
-    right: -70px;
-    top: 350px;
+    &::after {
+      right: -70px;
+      top: 350px;
+    }
   }
-
 }
 
 
@@ -124,6 +119,7 @@
 @include m.breakpoint(desktop) {
   .hero {
     min-height: 720px;
+
     background-image: url('../../img/des/pattern-rings-xl.png');
     background-position: left 0px top 60px;
 
@@ -135,6 +131,8 @@
 
       right: 35%;
       top: 420px;
+
+      z-index: 0;
     }
 
     &__content {
@@ -146,10 +144,6 @@
       font-size: t.$fs-heading-xl;
       line-height: t.$lh-heading-xl;
       letter-spacing: t.$ls-heading-xl;
-    }
-
-    .hero__image {
-      display: none;
     }
   }
 }
