@@ -2,13 +2,13 @@
 @use '../abstracts/mixins' as m;
 
 .skills {
-  padding: t.$space-xl t.$space-sm;
-  border-top: 1px solid t.$color-text-secondary;
-  border-bottom: 1px solid t.$color-text-secondary;
+  padding: t.$space-xl 0;
 
-  &__container {
+  .container {
     display: grid;
     gap: t.$space-xl;
+    text-align: center;
+    justify-items: center;
   }
 
   &__title {
@@ -22,14 +22,24 @@
   }
 }
 
+/* ================= TABLET ================= */
+
 @include m.breakpoint(tablet) {
-  .skills__container {
-    grid-template-columns: repeat(2, 1fr);
+  .skills {
+    .container {
+      grid-template-columns: repeat(2, 1fr);
+      text-align: left;
+      justify-items: start;
+    }
   }
 }
 
+/* ================= DESKTOP ================= */
+
 @include m.breakpoint(desktop) {
-  .skills__container {
-    grid-template-columns: repeat(3, 1fr);
+  .skills {
+    .container {
+      grid-template-columns: repeat(3, 1fr);
+    }
   }
 }

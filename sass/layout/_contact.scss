@@ -5,12 +5,10 @@
   background-color: t.$color-background-secondary;
   padding: t.$space-xl t.$space-sm;
 
-  /* ---------- IMAGEN DECORATIVA ---------- */
   background-image: url('../../img/mob/pattern-rings.png');
   background-repeat: no-repeat;
   background-position: left 0 bottom 240px;
 
-  /* ---------- CONTENEDOR GENERAL ---------- */
   &__container {
     text-align: center;
     max-width: t.$container-mobile;
@@ -29,11 +27,9 @@
     margin: 0 auto t.$space-lg;
   }
 
-  /* ---------- FORM ---------- */
   &__form {
     max-width: 500px;
     margin: 0 auto;
-
     display: flex;
     flex-direction: column;
 
@@ -42,15 +38,6 @@
     }
   }
 
-  /* ---------- DIVIDER ---------- */
-  &__divider {
-    height: 2px;
-    background: t.$color-text-primary;
-    width: 100%;
-    margin: t.$space-xl 0;
-  }
-
-  /* ---------- FOOTER BOTTOM ---------- */
   &__bottom {
     display: flex;
     flex-direction: column;
@@ -64,14 +51,12 @@
   /* ================= TABLET ================= */
 
   @include m.breakpoint(tablet) {
-
     padding: t.$space-xl t.$space-lg;
     background-position: left 0 bottom 200px;
 
     &__container,
     &__bottom {
       max-width: t.$container-tablet;
-      margin: 0 auto;
     }
 
     &__title {
@@ -101,30 +86,28 @@
     }
   }
 
- /* ================= DESKTOP ================= */
+  /* ================= DESKTOP ================= */
 
   @include m.breakpoint(desktop) {
-
     padding: t.$space-xl 0;
 
     background-image: url('../../img/des/pattern-rings.png');
     background-position: left 0 bottom 220px;
 
     &__container,
-    &__bottom,
-    &__divider {
+    &__bottom {
       max-width: t.$container-max-width;
       margin-left: auto;
       margin-right: auto;
     }
 
-    /* GRID */
     &__container {
       display: grid;
       grid-template-columns: 1fr 1.15fr;
       column-gap: calc(t.$space-xl * 2);
       align-items: start;
       text-align: left;
+      padding-bottom: t.$space-lg;
     }
 
     &__content {
@@ -142,15 +125,10 @@
       width: 100%;
     }
 
-    /* DIVIDER */
-    &__divider {
-      margin: t.$space-xl auto;
-    }
-
-    /* BOTTOM */
     &__bottom {
       justify-content: space-between;
       align-items: center;
+      padding-top: t.$space-lg;
     }
   }
 }
