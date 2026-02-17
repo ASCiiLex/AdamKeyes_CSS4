@@ -58,7 +58,11 @@
     <section class="hero">
       <div class="container">
         <div class="hero__image-wrapper">
-          <img src="img/mob/adamk.png" alt="Portrait of Adam Keyes" class="hero__image">
+          <picture class="hero__image">
+            <source srcset="img/des/adamk.png" media="(min-width: 1200px)">
+            <source srcset="img/tab/adamk.png" media="(min-width: 768px)">
+            <img src="img/mob/adamk.png" alt="Portrait of Adam Keyes">
+          </picture>
         </div>
 
         <div class="hero__content">

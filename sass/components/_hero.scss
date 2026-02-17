@@ -4,12 +4,15 @@
 .hero {
   position: relative;
   padding: t.$space-xl 0;
+  overflow: hidden;
 
   .container {
+    position: relative;
     display: flex;
     flex-direction: column;
     align-items: center;
     text-align: center;
+    z-index: 2; // 🔥 texto por encima
   }
 
   &__image-wrapper {
@@ -17,12 +20,18 @@
   }
 
   &__image {
-    width: 100%;
+    display: block;
     max-width: 250px;
+
+    img {
+      width: 100%;
+      height: auto;
+      display: block;
+    }
   }
 
   &__title {
-    font-size: 40px; // override mobile
+    font-size: 40px;
     line-height: 1.1;
     letter-spacing: -1px;
 
@@ -52,27 +61,34 @@
   }
 }
 
+
+/* ================= TABLET ================= */
+
 @include m.breakpoint(tablet) {
   .hero {
+    min-height: 600px;
+    padding-top: 0;
+
     .container {
-      flex-direction: row;
-      justify-content: space-between;
-      align-items: center;
+      align-items: flex-start;
       text-align: left;
-    }
-
-    &__image-wrapper {
-      order: 2;
-      margin-bottom: 0;
-    }
-
-    &__image {
-      max-width: 350px;
+      padding-top: t.$space-xl;
     }
 
     &__content {
-      order: 1;
-      max-width: 55%;
+      max-width: 445px;
+    }
+
+    &__image-wrapper {
+      position: absolute;
+      bottom: 0;
+      right: 0;
+      margin: 0;
+      z-index: 1;
+    }
+
+    &__image {
+      max-width: 322px;
     }
 
     &__title {
@@ -81,16 +97,31 @@
   }
 }
 
+
+/* ================= DESKTOP ================= */
+
 @include m.breakpoint(desktop) {
   .hero {
+    min-height: 720px;
+
+    &__content {
+      max-width: 635px;
+      padding-top: t.$space-xl;
+    }
+
+    &__image-wrapper {
+      right: 0;
+      bottom: 0;
+    }
+
+    &__image {
+      max-width: 445px;
+    }
+
     &__title {
       font-size: t.$fs-heading-xl;
       line-height: t.$lh-heading-xl;
       letter-spacing: t.$ls-heading-xl;
-    }
-
-    &__image {
-      max-width: 450px;
     }
   }
 }
