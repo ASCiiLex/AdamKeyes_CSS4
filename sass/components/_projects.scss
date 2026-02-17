@@ -2,7 +2,6 @@
 @use '../abstracts/mixins' as m;
 
 .projects {
-  padding: t.$space-xl t.$space-sm;
 
   /* ---------- HEADER (TITLE + BTN INLINE ALWAYS) ---------- */
   &__header {
@@ -28,7 +27,6 @@
 
 @include m.breakpoint(tablet) {
   .projects {
-    padding: t.$space-xl t.$space-lg;
 
     &__grid {
       grid-template-columns: repeat(2, 1fr);
@@ -40,6 +38,6 @@
 
 @include m.breakpoint(desktop) {
   .projects {
-    padding: t.$space-xl t.$space-xl;
+    padding: t.$space-xl 0;
   }
 }
