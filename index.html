@@ -261,70 +261,78 @@
   <!-- FOOTER -->
   <footer class="contact">
 
-    <div class="contact__container">
+    <!-- FOOTER - FORM  -->
+    <div class="container">
+      <div class="contact__container">
 
-      <div class="contact__content">
-        <h2 class="contact__title">Contact</h2>
+        <div class="contact__content">
+          <h2 class="contact__title">Contact</h2>
 
-        <p class="contact__text">
-          I would love to hear about your project and how I could help. Please fill in the form, and I’ll get back to you as soon as possible.
-        </p>
+          <p class="contact__text">
+            I would love to hear about your project and how I could help. Please fill in the form, and I’ll get back to you as soon as possible.
+          </p>
+        </div>
+
+        <form class="contact__form">
+          <div class="form-group">
+            <input type="text" name="name" placeholder="NAME" required>
+            <span class="form-error">Sorry, invalid format here</span>
+          </div>
+
+          <div class="form-group">
+            <input type="email" name="email" placeholder="EMAIL" required>
+            <span class="form-error">Sorry, invalid format here</span>
+          </div>
+
+          <div class="form-group">
+            <textarea name="message" placeholder="MESSAGE" rows="4" required></textarea>
+            <span class="form-error">Sorry, invalid format here</span>
+          </div>
+
+          <button type="submit" class="btn btn--underline">
+            SEND MESSAGE
+          </button>
+        </form>
+
       </div>
-
-      <form class="contact__form">
-        <div class="form-group">
-          <input type="text" name="name" placeholder="NAME" required>
-          <span class="form-error">Sorry, invalid format here</span>
-        </div>
-
-        <div class="form-group">
-          <input type="email" name="email" placeholder="EMAIL" required>
-          <span class="form-error">Sorry, invalid format here</span>
-        </div>
-
-        <div class="form-group">
-          <textarea name="message" placeholder="MESSAGE" rows="4" required></textarea>
-          <span class="form-error">Sorry, invalid format here</span>
-        </div>
-
-        <button type="submit" class="btn btn--underline">
-          SEND MESSAGE
-        </button>
-      </form>
-
     </div>
 
     <!-- Divider -->
-    <div class="divider"></div>
+    <div class="container">
+      <div class="divider"></div>
+    </div>
 
-    <div class="contact__bottom">
-      <a href="/" class="logo">adamkeyes</a>
+    <!-- FOOTER - BOTTOM -->
+    <div class="container">
+      <div class="contact__bottom">
+        <a href="/" class="logo">adamkeyes</a>
 
-      <nav class="social">
-        <ul class="social__list">
-          <li class="social__item">
-            <a href="#" class="social__link">
-              <img src="img/icons/icon-github.svg" alt="GitHub">
-            </a>
-          </li>
-          <li class="social__item">
-            <a href="#" class="social__link">
-              <img src="img/icons/icon-frontendmentor.svg" alt="Frontend Mentor">
-            </a>
-          </li>
-          <li class="social__item">
-            <a href="#" class="social__link">
-              <img src="img/icons/icon-linkedin.svg" alt="LinkedIn">
-            </a>
-          </li>
-          <li class="social__item">
-            <a href="#" class="social__link">
-              <img src="img/icons/icon-twitter.svg" alt="Twitter">
-            </a>
-          </li>
-        </ul>
-      </nav>
+        <nav class="social">
+          <ul class="social__list">
+            <li class="social__item">
+              <a href="#" class="social__link">
+                <img src="img/icons/icon-github.svg" alt="GitHub">
+              </a>
+            </li>
+            <li class="social__item">
+              <a href="#" class="social__link">
+                <img src="img/icons/icon-frontendmentor.svg" alt="Frontend Mentor">
+              </a>
+            </li>
+            <li class="social__item">
+              <a href="#" class="social__link">
+                <img src="img/icons/icon-linkedin.svg" alt="LinkedIn">
+              </a>
+            </li>
+            <li class="social__item">
+              <a href="#" class="social__link">
+                <img src="img/icons/icon-twitter.svg" alt="Twitter">
+              </a>
+            </li>
+          </ul>
+        </nav>
 
+      </div>
     </div>
 
   </footer>
