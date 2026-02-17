@@ -2,7 +2,7 @@
 @use '../abstracts/mixins' as m;
 
 .header {
-  padding: t.$space-lg 0;
+  padding-top: t.$space-lg;
 
   &__container {
     display: flex;
@@ -17,6 +17,8 @@
 @include m.breakpoint(tablet) {
   .header {
     padding: t.$space-lg 0;
+    position: relative;
+    z-index: 3;
 
     &__container {
       flex-direction: row;

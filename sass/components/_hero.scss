@@ -3,8 +3,7 @@
 
 .hero {
   position: relative;
-  padding: t.$space-xl 0;
-  overflow: hidden;
+    overflow: hidden;
   
 
   background-image: url('../../img/mob/pattern-rings.png');
@@ -120,8 +119,6 @@
 }
 
 
-
-
 /* ================= DESKTOP ================= */
 
 @include m.breakpoint(desktop) {
@@ -136,8 +133,8 @@
 
       background-image: url('../../img/des/Oval.png');
 
-      right: 0px;
-      top: 460px;
+      right: 35%;
+      top: 420px;
     }
 
     &__content {
