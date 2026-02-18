@@ -4,6 +4,7 @@
 .hero {
   position: relative;
   z-index: 1;
+  overflow-x: clip;
 
   background-image: url('../../img/mob/pattern-rings.png');
   background-repeat: no-repeat;
@@ -69,7 +70,8 @@
     background-repeat: no-repeat;
     background-size: contain;
 
-    right: -70px;
+    right: 0;
+    transform: translateX(50%);
     top: 120px;
 
     z-index: 0;
@@ -83,6 +85,7 @@
 @include m.breakpoint(tablet) {
   .hero {
     min-height: 600px;
+    
 
     background-image: url('../../img/tab/pattern-rings.png');
     background-position: left 0px top 10px;
@@ -108,7 +111,8 @@
     }
 
     &::after {
-      right: -70px;
+      right: 0;
+      transform: translateX(50%);
       top: 350px;
     }
   }
