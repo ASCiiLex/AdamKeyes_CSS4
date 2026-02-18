@@ -1,6 +1,7 @@
 import { defineConfig } from "vite";
 
 export default defineConfig({
+  base: "/AdamKeyes_CSS4/",
   root: ".",
   server: {
     open: true
