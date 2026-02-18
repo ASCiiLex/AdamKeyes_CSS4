@@ -88,7 +88,7 @@
     
 
     background-image: url('../../img/tab/pattern-rings.png');
-    background-position: left 0px top 10px;
+    background-position: left 0px top 0px;
 
     .container {
       align-items: flex-start;
@@ -97,12 +97,14 @@
     }
 
     &__content {
-      max-width: 445px;
+      max-width: 520px;
     }
 
     &__title {
       padding-top: 0;
-      font-size: 56px;
+      font-size: t.$fs-heading-xl;
+      line-height: t.$lh-heading-xl;
+      letter-spacing: t.$ls-heading-xl;
     }
 
     /* ocultar imagen mobile */
@@ -114,6 +116,10 @@
       right: 0;
       transform: translateX(50%);
       top: 350px;
+    }
+
+    &__text {
+      max-width: 450px;
     }
   }
 }
@@ -141,7 +147,7 @@
     }
 
     &__content {
-      max-width: 635px;
+      max-width: 720px;
       padding-top: t.$space-xl;
     }
 
@@ -149,6 +155,10 @@
       font-size: t.$fs-heading-xl;
       line-height: t.$lh-heading-xl;
       letter-spacing: t.$ls-heading-xl;
+    }
+
+    &__text {
+      max-width: 420px;
     }
   }
 }
