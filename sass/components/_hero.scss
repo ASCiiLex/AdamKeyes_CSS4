@@ -43,10 +43,10 @@
   }
 
   &__title {
-    font-size: 40px;
-    line-height: 1.1;
-    letter-spacing: -1px;
+    font-size: t.$fs-heading-l;
+    line-height: t.$lh-heading-l;
     padding-top: 250px;
+    max-width: 400px;
 
   }
 
@@ -96,6 +96,10 @@
   z-index: -1;
 }
 
+.tablet-break {
+    display: none;
+  }
+
 
 
 
@@ -115,7 +119,7 @@
     }
 
     &__content {
-      max-width: 520px;
+      max-width: 600px;
     }
 
     &__title {
@@ -123,6 +127,7 @@
       font-size: t.$fs-heading-xl;
       line-height: t.$lh-heading-xl;
       letter-spacing: t.$ls-heading-xl;
+      max-width: 600px;
     }
 
     /* ocultar imagen mobile */
@@ -146,7 +151,7 @@
   }
 
   .tablet-break {
-    display: none;
+    display: block;
   }
 
   
@@ -168,7 +173,7 @@
 
       background-image: url('../../img/des/Oval.png');
 
-      right: 35%;
+      right: 45%;
       top: 420px;
 
       z-index: 0;
@@ -183,14 +188,15 @@
       font-size: t.$fs-heading-xl;
       line-height: t.$lh-heading-xl;
       letter-spacing: t.$ls-heading-xl;
+      max-width: 800px;
     }
 
     &__text {
       max-width: 420px;
     }
   }
-
   .tablet-break {
-    display: block;
+    display: none;
   }
+  
 }
